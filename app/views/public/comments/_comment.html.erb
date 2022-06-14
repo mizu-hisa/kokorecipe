@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="col">
     <p>コメント件数：<%= recipe.recipe_comments.count %>　　</p>
@@ -10,12 +11,13 @@
         <% end %>
     <% end %>
   </div>
-
+    <% if current_customer != @customer%>
       <div class="col">
         <%= form_with( model: [recipe, recipe_comment], url: recipe_comments_path(recipe_id: recipe.id), method: :post) do |f| %>
           <%= f.text_area :comment, rows: '5', placeholder: "コメントをここに" %><br>
           <%= f.submit "送信する" %>
         <% end %>
       </div>
+    <% end %>
 
 </div>
