@@ -23,6 +23,10 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
 
+    devise_scope :user do
+      post 'users/guest_sign_in', to: 'user/sessions#guest_sign_in'
+    end
+
     resources :recipes, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
       resource :favorites, only: [:create, :destroy]
       resources :comments, only: [:create, :destroy]
@@ -31,12 +35,11 @@ Rails.application.routes.draw do
     get '/customers/is_deleted' => 'customers#is_deleted'
     # 論理削除用のルーティング
     patch 'customers/:id/withdrawal' => 'customers#withdrawal', as: 'withdrawal'
-    resources :customers, only: [:show, :edit, :update]
-    
-    resource :relationships, only: [:create, :destroy]
-    get 'followings' => 'relationships#followings', as: 'followings'
-    get 'followers' => 'relationships#followers', as: 'followers'
-
+    resources :customers, only: [:show, :edit, :update] do
+      resource :relationships, only: [:create, :destroy]
+      get 'followings' => 'relationships#followings', as: 'followings'
+      get 'followers' => 'relationships#followers', as: 'followers'
+    end
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
