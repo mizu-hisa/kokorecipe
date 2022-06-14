@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :public do
+    get 'relationships/followings'
+    get 'relationships/followers'
+  end
   # 顧客用
   # devise_for :customers
   # URL /customers/sign_in ...
@@ -15,6 +19,7 @@ Rails.application.routes.draw do
     sessions: "admin/sessions"
   }
 
+
   scope module: :public do
     root to: 'homes#top'
 
@@ -27,6 +32,10 @@ Rails.application.routes.draw do
     # 論理削除用のルーティング
     patch 'customers/:id/withdrawal' => 'customers#withdrawal', as: 'withdrawal'
     resources :customers, only: [:show, :edit, :update]
+    
+    resource :relationships, only: [:create, :destroy]
+    get 'followings' => 'relationships#followings', as: 'followings'
+    get 'followers' => 'relationships#followers', as: 'followers'
 
   end
 
