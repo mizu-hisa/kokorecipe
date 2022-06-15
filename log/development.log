@@ -13848,3 +13848,733 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
 
 
+Started GET "/" for 126.251.106.226 at 2022-06-15 07:36:37 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/public/recipes/_index.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 22], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 11], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (4.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 13], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 25], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  Rendered public/recipes/_index.html.erb (Duration: 174.6ms | Allocations: 62970)
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 177.2ms | Allocations: 63421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:11
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 1896)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 188.4ms | Allocations: 67965)
+Completed 200 OK in 216ms (Views: 184.4ms | ActiveRecord: 9.1ms | Allocations: 74238)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:38 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 424)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:38 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:38 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:38 +0000
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:38 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 2600)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/recipes/1" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/recipes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/recipes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 22], ["variation_digest", "wzYI6hb+UmWxzcS2LUnbMX+zIK8="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "2LUGSpqeAxE2FTbZR5KExFsl26Y="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipe_comments" WHERE "recipe_comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:3
+  [1m[36mRecipeComment Load (0.1ms)[0m  [1m[34mSELECT "recipe_comments".* FROM "recipe_comments" WHERE "recipe_comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:4
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:5
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:8
+  Rendered public/comments/_comment.html.erb (Duration: 13.1ms | Allocations: 6505)
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."recipe_id" = ? AND "favorites"."customer_id" = ? LIMIT ?[0m  [["recipe_id", 1], ["customer_id", 1], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/public/favorites/_iine.html.erb:14
+  Rendered public/favorites/_iine.html.erb (Duration: 20.3ms | Allocations: 3585)
+  Rendered public/recipes/show.html.erb within layouts/application (Duration: 55.3ms | Allocations: 17480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 19661)
+Completed 200 OK in 74ms (Views: 60.7ms | ActiveRecord: 2.4ms | Allocations: 26163)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaalJoY201MmRIUjNNMjB5YWpGdGJEYzNhRzA0WTJZM2FEWmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQ3LjQ1MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c71f13dafd7e9c1406e17dba0abea5f64e45ed6c/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlVFV5WVdrMWN6WXdaM2N3Y1RabVlYRXpOSFU1ZVhsc05Ea3pZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjU0LjQ4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26a37f3c0033a2a69c0105f485a81f637db0d065/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:40 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/public/recipes/_index.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 22], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 11], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+  ↳ app/models/recipe.rb:14:in `get_image'
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  ↳ app/views/public/recipes/_index.html.erb:16
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaalJoY201MmRIUjNNMjB5YWpGdGJEYzNhRzA0WTJZM2FEWmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQ3LjQ1MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c71f13dafd7e9c1406e17dba0abea5f64e45ed6c/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlVFV5WVdrMWN6WXdaM2N3Y1RabVlYRXpOSFU1ZVhsc05Ea3pZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjU0LjQ4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26a37f3c0033a2a69c0105f485a81f637db0d065/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 13], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 25], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  Rendered public/recipes/_index.html.erb (Duration: 143.3ms | Allocations: 50055)
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 143.7ms | Allocations: 50155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:11
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 1138)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layout layouts/application.html.erb (Duration: 151.1ms | Allocations: 53338)
+Completed 200 OK in 153ms (Views: 150.1ms | ActiveRecord: 2.1ms | Allocations: 53760)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:44 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/recipes/1" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/recipes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/recipes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 22], ["variation_digest", "wzYI6hb+UmWxzcS2LUnbMX+zIK8="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "2LUGSpqeAxE2FTbZR5KExFsl26Y="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlVFV5WVdrMWN6WXdaM2N3Y1RabVlYRXpOSFU1ZVhsc05Ea3pZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjU0LjQ4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26a37f3c0033a2a69c0105f485a81f637db0d065/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaalJoY201MmRIUjNNMjB5YWpGdGJEYzNhRzA0WTJZM2FEWmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQ3LjQ1MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c71f13dafd7e9c1406e17dba0abea5f64e45ed6c/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipe_comments" WHERE "recipe_comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+  ↳ app/views/public/comments/_comment.html.erb:3
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mRecipeComment Load (0.1ms)[0m  [1m[34mSELECT "recipe_comments".* FROM "recipe_comments" WHERE "recipe_comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  ↳ app/views/public/comments/_comment.html.erb:4
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+  ↳ app/views/public/comments/_comment.html.erb:5
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:8
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+  Rendered public/comments/_comment.html.erb (Duration: 40.9ms | Allocations: 17552)
+Processing by ActiveStorage::DiskController#show as JPEG
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."recipe_id" = ? AND "favorites"."customer_id" = ? LIMIT ?[0m  [["recipe_id", 1], ["customer_id", 1], ["LIMIT", 1]]
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  ↳ app/models/recipe.rb:18:in `favorited_by?'
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."recipe_id" = ?[0m  [["recipe_id", 1]]
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  ↳ app/views/public/favorites/_iine.html.erb:14
+  Rendered public/favorites/_iine.html.erb (Duration: 13.7ms | Allocations: 5286)
+  Rendered public/recipes/show.html.erb within layouts/application (Duration: 86.5ms | Allocations: 34065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 232)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 90.7ms | Allocations: 36338)
+Completed 200 OK in 94ms (Views: 90.3ms | ActiveRecord: 1.4ms | Allocations: 37323)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaalJoY201MmRIUjNNMjB5YWpGdGJEYzNhRzA0WTJZM2FEWmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQ3LjQ1MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c71f13dafd7e9c1406e17dba0abea5f64e45ed6c/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlVFV5WVdrMWN6WXdaM2N3Y1RabVlYRXpOSFU1ZVhsc05Ea3pZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjU0LjQ4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26a37f3c0033a2a69c0105f485a81f637db0d065/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:36:45 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started DELETE "/customers/sign_out" for 126.251.106.226 at 2022-06-15 07:36:50 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://190bebe3f4b544b392d5ba159438ad5e.vfs.cloud9.ap-northeast-1.amazonaws.com/customers/sign_in
+Completed 302 Found in 15ms (ActiveRecord: 0.1ms | Allocations: 4846)
+
+
+Started GET "/customers/sign_in" for 126.251.106.226 at 2022-06-15 07:36:51 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.6ms | Allocations: 321)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 277)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5512)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7684)
+
+
+Started POST "/customers/sign_in" for 126.251.106.226 at 2022-06-15 07:36:56 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "b@b"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.2ms | Allocations: 1580)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1276)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3583)
+Completed 200 OK in 292ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 4695)
+
+
+Started POST "/customers/sign_in" for 126.251.106.226 at 2022-06-15 07:37:02 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "b@b"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms | Allocations: 1430)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "customer"=>{"email"=>"b@b", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered public/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3577)
+Completed 200 OK in 288ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 4137)
+
+
+Started GET "/" for 126.251.106.226 at 2022-06-15 07:37:08 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/public/recipes/_index.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 22], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 11], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 13], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 25], ["variation_digest", "nhBBQK67SS0aKmKuJY4gnxHNNEk="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/_index.html.erb:16
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mCACHE ActiveStorage::VariantRecord Load (0.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  Rendered public/recipes/_index.html.erb (Duration: 76.8ms | Allocations: 29213)
+  Rendered public/homes/top.html.erb within layouts/application (Duration: 77.2ms | Allocations: 29313)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 290)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 31647)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 1.8ms | Allocations: 32048)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:08 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:08 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:08 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:08 +0000
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:08 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms | Allocations: 4879)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/recipes/1" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/recipes_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/recipes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:10:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 22], ["variation_digest", "wzYI6hb+UmWxzcS2LUnbMX+zIK8="], ["LIMIT", 1]]
+  ↳ app/models/recipe.rb:14:in `get_image'
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/recipes/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:17:in `get_profile_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 6], ["variation_digest", "2LUGSpqeAxE2FTbZR5KExFsl26Y="], ["LIMIT", 1]]
+  ↳ app/models/customer.rb:21:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipe_comments" WHERE "recipe_comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:3
+  [1m[36mRecipeComment Load (0.1ms)[0m  [1m[34mSELECT "recipe_comments".* FROM "recipe_comments" WHERE "recipe_comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:4
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/comments/_comment.html.erb:5
+  Rendered public/comments/_comment.html.erb (Duration: 6.7ms | Allocations: 2803)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  ↳ app/views/public/favorites/_iine.html.erb:20
+  Rendered public/favorites/_iine.html.erb (Duration: 2.1ms | Allocations: 910)
+  Rendered public/recipes/show.html.erb within layouts/application (Duration: 35.4ms | Allocations: 11542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 244)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 13828)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 1.2ms | Allocations: 14801)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaalJoY201MmRIUjNNMjB5YWpGdGJEYzNhRzA0WTJZM2FEWmthZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQ3LjQ1MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c71f13dafd7e9c1406e17dba0abea5f64e45ed6c/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlVFV5WVdrMWN6WXdaM2N3Y1RabVlYRXpOSFU1ZVhsc05Ea3pZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjU0LjQ4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26a37f3c0033a2a69c0105f485a81f637db0d065/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Completed 200 OK in 13ms (ActiveRecord: 0.0ms | Allocations: 7076)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOR0pzWkdScmVXOXZObUl3TXpkaWNtVmtjbkl5WVhWcU9HcHNNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU0OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b57b435c37e8dbd4856476ff0e2e9b4bc42a0e5f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjSGhqYnpWa1lXdDNlVGR3ZG1Gd2NtTnJNbVIxYlRVeU1XczJPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--36ab60bb43250246c5a3b962a3ae3a55be6ac6d2/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMlprWTNJMlltWnphVzFrY0dWd2VXRmtkVGxrZVRVMGEzRXhPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjY1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40ca4bc2d3853f69fe5666d60ba8dab5aac8471e/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNV1ZwTkd4aGIyaGljemRyYzNNNU5HTnViMmt3TUc4ME9XdHNZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjU2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--2e7f9bc7e5da6f3f710d6b49af900029fccb6f9f/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiSGg0YzNrd2RXWnllV1F5ZFdWclpEVmhkV1psYlhCdFpIRjFaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OaGJYQnNaUzFoZFhSb2IzSXhMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmMyRnRjR3hsTFdGMWRHaHZjakV1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTA2LTE1VDA3OjM4OjQxLjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--27fa969392d6620ef2838ae40ff8c635af8973ac/sample-author1.jpg" for 126.251.106.226 at 2022-06-15 07:37:09 +0000
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Cannot render console from 126.251.106.226! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sample-author1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 1429)
+
+
