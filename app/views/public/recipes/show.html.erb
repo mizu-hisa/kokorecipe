@@ -21,7 +21,8 @@
                 </div>
           </div>
         </div>
-
+        
+        
             <div class="row text-center offset-2">
               <div class="col-5 mt-5">
                 <%= render 'public/comments/comment', recipe: @recipe, recipe_comment: @recipe_comment %>
@@ -30,8 +31,7 @@
                 <%= render 'public/favorites/iine', recipe: @recipe %>
               </div>
               <div class="col-2 mt-5 text-left"><br>
-                <p>follow</p>
-                <p>follower</p>
+                <%= render "public/relationships/follow", customer: @customer %>
               </div>
             </div>
         </div>
